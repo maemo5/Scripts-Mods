@@ -1,0 +1,40 @@
+Worked with @StokesMagee to bring combat logging punishment to Exile.
+This will kick in and kill the combat logger if they leave the game whilst in combat, either through alt+f4 or end mission, leaving their lifeless corpse there to loot.
+Players cannot logout normally whilst in combat as the option is blocked in escape menu
+
+CLIENT
+Pull ExileClient_gui_hud_toggleCombatIcon.sqf from client files into your mission file and change it to the following:-
+
+private["_display", "_icon"];
+disableSerialization;
+_display = uiNamespace getVariable "RscExileHUD";
+_icon = _display displayCtrl 1008;
+if (_this && {!(player getVariable ["ExileIsInCombat", false])}) then
+{
+    player setVariable ["ExileIsInCombat", true, true];
+}
+else
+{
+    if (!(_this) && {player getVariable["ExileIsInCombat", false]}) then
+    {
+        player setVariable ["ExileIsInCombat", nil, true];
+    };
+};
+_icon ctrlShow _this;
+true
+What this does is set a variable on the player that can be read from the server
+Don't forget to add it into config.cpp in
+
+class CfgExileCustomCode
+{
+	ExileClient_gui_hud_toggleCombatIcon = "ExileClient_gui_hud_toggleCombatIcon.sqf";//assuming changed file is in mission root
+};
+SERVER
+Next, replace ExileServer_system_network_event_onHandleDisconnect.sqf with https://pastebin.com/gv0QhFD8
+Note: Uncomment the lines marked for logging if you have infiSTAR
+
+ 
+
+Then repack exile_server and your mission file and you're done.
+Updated: Added Toast request 7/11/17
+Updated: Check if server is about to restart and not punish the player 28/05/18

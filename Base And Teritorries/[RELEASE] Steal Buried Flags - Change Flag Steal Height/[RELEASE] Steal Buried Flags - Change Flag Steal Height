@@ -1,0 +1,91 @@
+** All credit to the exile mod team for the code, this is just a simple edit and override **
+
+ 
+
+This override addresses the common issue of players burying their flags deep into the ground, rocks, existing map structures or, other terrain by very simply increasing the height on the flag pole from which you can successfully steal it.
+
+In your mission file's config.cpp add the following line to your class CfgExileCustomCode  section:
+
+    //Steal Flag Height
+    ExileClient_action_stealFlag_condition = "overrides\ExileClient_action_stealFlag_condition.sqf";
+So it looks like this:
+
+class CfgExileCustomCode 
+{
+	/*
+		You can overwrite every single file of our code without touching it.
+		To do that, add the function name you want to overwrite plus the 
+		path to your custom file here. If you wonder how this works, have a
+		look at our bootstrap/fn_preInit.sqf function.
+
+		Simply add the following scheme here:
+
+		<Function Name of Exile> = "<New File Name>";
+
+		Example:
+
+		ExileClient_util_fusRoDah = "myaddon\myfunction.sqf";
+	*/
+	
+	//Steal Flag Height
+	ExileClient_action_stealFlag_condition = "overrides\ExileClient_action_stealFlag_condition.sqf";
+	
+};
+Then create a file called ExileClient_action_stealFlag_condition.sqf and copy the text below inside it:
+
+/**
+ * ExileClient_action_stealFlag_condition
+ *
+ * Exile Mod
+ * www.exilemod.com
+ * © 2015 Exile Mod Team
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+
+/*
+Steal flag height adjustment to 4m from default 1.5m to prevent burying exploit
+by BaroN of GoG's World
+http://www.gogsworld.com/home
+*/
+
+ 
+private["_flagObject","_result","_buildRights"];
+_flagObject = _this;
+_result = "";
+try 
+{
+	if (isNull _flagObject) then
+	{
+		throw "Invalid flag object";
+	};
+	if ((_flagObject getvariable ["ExileFlagStolen", 0]) isEqualTo 1) then
+	{
+		throw "Cannot steal a flag twice!";
+	};
+	if ((_flagObject distance2D player) > 2) then 
+	{
+		throw "You are too far away!";
+	};
+	if (((getPosASL player) select 2) > (((getPosASL _flagObject) select 2) + 4)) then 
+	{
+		throw "You cannot steal flags at the top of the pole!";
+	};
+	_buildRights = _flagObject getVariable ["ExileTerritoryBuildRights",[]];
+	if ((getPlayerUID player) in _buildRights) then
+	{
+		throw "You cannot steal your own flag!";
+	};
+}
+catch 
+{
+	_result = _exception;
+};
+_result
+Place this file inside your overrides folder in your mission folder. If you don't have one, simply create one. You can put the file in any other folder you have like; fixes, custom etc. but, remember to change the address in your config.cpp custom code section. 
+
+The steal height I have changed to in the above file is 4m. You can change that to whatever you want. The exile default is 1.5m. To change it to a different height edit the number 4 from the new file above on this line:
+
+    if (((getPosASL player) select 2) > (((getPosASL _flagObject) select 2) + 4)) then 
+** Please note that at 4m players will need a 2 story base to cover their flag. A single story base will allow raiders to steal the flag from the roof of the base if the flag is at ground level and the first storey is also at ground level. So, please test what height works for you **

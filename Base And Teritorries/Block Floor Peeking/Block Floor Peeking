@@ -1,0 +1,14 @@
+Thanks go to Sa-Matra for the initial code fix from King of the Hill. I have altered it to work in Exile mod
+
+Grab the files from GitHub https://github.com/MGTDB/Exile_Block_Floor_Peeking
+
+Add the contents of initPlayerLocal to your initPlayerLocal file at the top below 
+
+if (!hasInterface || isServer) exitWith {};
+Create a new folder called addons, within that folder create a new folder called fixes  (unless you already have them) or alter paths in calls to your mission file requirements
+Add the 2 files in addons/fixes, or edit your existing files if already custom and add the contents of
+
+class CfgExileCustomCode
+Into that code block in mission.cpp (or .hpp)
+
+Pack mission file

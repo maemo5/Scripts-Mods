@@ -1,0 +1,12 @@
+Installation: add effect.sqf to your Exile.Altis.pbo in the main directory.
+    Add the following line of code to the very top of your InitPlayerLocal.sqf file:
+    
+    call compileFinal preprocessFileLineNumbers "effect.sqf"; // color correction script
+    
+    Comment out or uncomment any one of the preset colors listed in the effect.sqf or feel
+    free to add your own.
+    To generate your own correction:
+    Paste any one of the presets from effect.sqf into the Eden debug console. Make your changes, then copy those changes to a new
+    preset in the effect.sqf file.
+    
+    So easy, even I can do it.

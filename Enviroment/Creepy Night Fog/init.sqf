@@ -1,0 +1,1 @@
+_GF = [] execVM "ground_fog.sqf";

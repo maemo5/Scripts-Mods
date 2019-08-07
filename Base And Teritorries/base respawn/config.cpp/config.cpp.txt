@@ -1,0 +1,2 @@
+// base respawns
+ ExileClient_gui_selectSpawnLocation_show = "Custom\baserespawn.sqf";

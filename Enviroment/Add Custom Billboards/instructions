@@ -1,0 +1,7 @@
+With this you can add indestructible billboards server site.
+
+download the pbo file and un pbo it. Go to billboards.sqf in the mapcontant folder add the name of your picture file (i use .paa but you can use others to).
+
+Repack your pbo and place it in  @exileserver\addons folder 
+
+Go to your mission.pbo and add a new folder called textures and add your picture file. repack your pbo and your done

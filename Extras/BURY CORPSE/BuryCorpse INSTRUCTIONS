@@ -1,0 +1,46 @@
+#####################################        
+#############      INSTALLATION     #########
+#####################################
+
+##>1. Copy the BuryCorpse.sqf in in the folder \Server\mpmissions\Exile.YOURMISSION\custom\
+##>2. Apply the changes & adds listed below to the files in the folder \Server\mpmissions\Exile.YOURMISSION\
+##>3. Add BE filter
+
+##########################################################
+############# CHANGE THE LINES IN -> File "config.cpp"      ############
+#############             FROM (DEFAULT EXILE)                          ############
+#########################################################
+
+class HideCorpse: ExileAbstractAction
+            {
+                title = "Hide Body";
+                condition = "!(alive ExileClientInteractionObject) && ('Exile_Melee_Shovel' isEqualTo (currentWeapon player))";
+                action = "['HideBody', (_this select 0)] call ExileClient_action_execute";
+            };
+            
+#########################################
+#############                CHANGE              ##########
+#############                      TO                  ##########
+#########################################
+
+class HideBody: ExileAbstractAction
+        {
+            title = "<t color='#ff0000'>Bury corpse</t>";
+            condition = "!(alive ExileClientInteractionObject) && ('Exile_Melee_Shovel' isEqualTo (currentWeapon player))";
+            action = "_this call VNM_fnc_Hidebody";
+        };   
+            
+    
+###############################################################
+#############                ADD THE LINES IN -> File "init.sqf"               #############
+###############################################################
+
+//BuryCorpse
+VNM_fnc_Hidebody = compileFinal preprocessFileLineNumbers "Custom\BuryCorpse.sqf";
+
+############################################
+#############       BATTLEYE                       ############
+############################################
+
+You have to add BE filters yourself. So install the script, use it and get kicked,
+and then follow the tutorial below to add filters step by step.

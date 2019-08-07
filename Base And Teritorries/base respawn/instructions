@@ -1,0 +1,17 @@
+*DISCLAIMER* This is not my script. The owner of this script is unknown.
+
+This script will allow your players to respawn at their bases upon death. Any base the player has building rights to can be utilized as a spawn point. Unfortunately this is not compatible with xSpawn as they both replace the same Exile function.
+
+INSTRUCTIONS:
+
+Step 1: DePbo your map (i.e. Exile.Altis).
+
+Step 2: Create a folder and name it "Custom". (Disregard if you already have one)
+
+Step 3: Place the "baserespawn.sqf" into the "Custom" folder.
+
+Step 4: Inside of your "config.cpp" add the following line to your "class cfgExileCustomCode":
+
+//Base Respawn (Can't use with xSpawn)
+ExileClient_gui_selectSpawnLocation_show = "Custom\baserespawn.sqf";
+Step 5: RePbo your map and upload.

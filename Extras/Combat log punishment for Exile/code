@@ -1,0 +1,89 @@
+/**
+ * ExileServer_system_network_event_onHandleDisconnect
+ *
+ * Exile Mod
+ * www.exilemod.com
+ * © 2015 Exile Mod Team
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+ 
+private["_unit", "_id", "_pos", "_newUnitDeaths", "_constructionObject", "_animal", "_sessionID"];
+_unit = _this select 0;
+_id = _this select 1;
+_uid = _this select 2;
+_name = _this select 3;
+_pos = getPos _unit;
+_newUnitDeaths = _unit getVariable ["ExileDeaths", 0];
+if !(_uid in ["", "__SERVER__", "__HEADLESS__"]) then
+{
+    _constructionObject = _unit getVariable ["ExileConstructionObject", objNull];
+    if !(isNull _constructionObject) then
+    {
+        deleteVehicle _constructionObject;
+    };
+    if (_unit getVariable ["IsPlayingRussianRoulette", false]) then
+    {
+        _unit call ExileServer_system_russianRoulette_event_onPlayerDisconnected;
+        _unit setVariable ["ExileIsDead", false];
+    };
+    _animal = missionNamespace getVariable [format ["ExileAnimal%1", _uid], objNull];
+    if !(isNull _animal) then
+    {
+        deleteVehicle _animal;
+        missionNamespace setVariable [format ["ExileAnimal%1", _uid], nil];
+    };
+    format["endAccountSession:%1", _uid] call ExileServer_system_database_query_fireAndForget;
+    _sessionID = _unit getVariable ["ExileSessionID", ""];
+    _sessionID call ExileServer_system_session_end;
+    _unit setVariable ["ExileSessionID", nil];
+    if !(_unit getVariable ["ExileIsDead", false]) then
+    {
+        if (_unit getVariable ["ExileIsHandcuffed", false] || {_unit getVariable ["ExileIsInCombat", false]}) then
+        {
+            if((240-(serverTime)/60) <10)then //time in minutes between restarts, 240 = 4 hours, adjust to your restarts
+            {
+                //_time = (240-(serverTime)/60);//uncomment this line for infiSTAR logging//time in minutes between restarts, 240 = 4 hours, adjust to your restarts
+                //_logOutlogNP = format ["(%1) %2 HANDCUFF or COMBAT logged @ %3 with %4 mins left - no punishment", name _unit,_uid,mapGridPosition _pos,_time];//uncomment this line for infiSTAR logging
+                //["COMBATLOG",_logOutlogNP] call FNC_A3_CUSTOMLOG;//uncomment this line for infiSTAR logging
+                _unit call ExileServer_object_player_database_update;
+                deleteVehicle _unit;
+                _unit = objNull;
+            }
+            else
+            {
+                _unit setDamage 999;
+                format["insertPlayerHistory:%1:%2:%3:%4:%5", _uid, _name, _pos select 0, _pos select 1, _pos select 2] call ExileServer_system_database_query_fireAndForget;
+                format["deletePlayer:%1", _unit getVariable ["ExileDatabaseId", -1]] call ExileServer_system_database_query_fireAndForget;
+                _unit setVariable ["ExileIsDead", true];
+                _unit setVariable ["ExileDiedAt", time];
+                _unit setVariable ["ExileName", _name, true];
+                _newUnitDeaths = _newUnitDeaths + 1;
+                _unit setVariable ["ExileDeaths", _newUnitDeaths];
+                format["addAccountDeath:%1", _uid] call ExileServer_system_database_query_fireAndForget;
+                _unit call ExileServer_object_player_sendStatsUpdate;
+                private _message = [
+                format["HANDCUFF LOGOUT: %1 has been killed", name _unit],
+                format["COMBAT LOGOUT: %1 has been killed", name _unit]
+                ] select (_unit getVariable ["ExileIsInCombat", false]);
+                //_logOutlog = format ["%1 %2", name _unit, _message];//uncomment this line for infiSTAR logging
+                //["COMBATLOG",_logOutlog] call FNC_A3_CUSTOMLOG;//uncomment this line for infiSTAR logging
+                ["systemChatRequest", [_message]] call ExileServer_system_network_send_broadcast;
+                ["toastRequest", ["InfoTitleAndText", ["Logout!", _message]]] call ExileServer_system_network_send_broadcast;
+                _unit = objNull;
+            };
+        }
+        else
+        {
+            _unit call ExileServer_object_player_database_update;
+            deleteVehicle _unit;
+            _unit = objNull;
+        };
+    };
+};
+if !(isNull _unit) then
+{
+    [_unit] joinSilent (createGroup independent);
+};
+false
