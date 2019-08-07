@@ -1,0 +1,39 @@
+Sorry it's late guys I had this on FTP Drive and had to find the file address again sad part is I cant find the BE filters we had from old forum.
+
+I wanted to share this because like the makers of the mod I believe in open source and support it, I don't ask or support credit request on code that should be free for all also I forgot who the main maker was as it's been used all way back from A2 and remade so much over time.
+
+This is a small mod that runs server side it's downloaded by clients when they load your exilemod server.
+Few things you will need to know is how to make images and then save them by using textview2 in .paa format the size of the image needs to be under 128x128 Arma BIS software supports png images Don't use normal images gif and png seem to work best for clear background text.
+
+You can get the tools needed here: http://www.armaholic.com/page.php?id=14435
+
+
+I highly recommend using Notepad ++ to edit below files
+
+1. If reading this you downloaded the mod follow steps below..
+2. Decompile Exile.Altis.pbo in MPMissions or other mission .pbo you may have
+3. Add logo.hpp and logo.sqf in Exile.Altis folder with your serverlogo.paa file
+4. Add code as seen below in bottom of description.ext
+Should like this:
+
+#include "config.cpp"
+#include "logo.hpp"
+5. Add code as seen below just under #include "initServer.sqf"
+Should like this: (The include part works just fine no need to call it any other way unless you have ocd and need execVM call)
+
+#include "initServer.sqf"
+#include "logo.sqf"
+6. Make your image 128x128 place it in same folder as logo.hpp and logo.sqf by default code loads image name serverlogo.paa I use png myself but you can use all formats supported with textview.
+        
+To move logo position edit below in logo.sqf by default it's on bottom left of screen.
+
+    safeZoneX+0.00,
+    safeZoneY+safeZoneH-0.12,
+ 
+
+MAIN DOWNLOAD FILES: http://relentlessservers.com/community/download/serverlogoMOD.zip
+I miss placed the .paa link for test logo sorry you will have to make own logo image to test it code is looking for serverlogo.paa as logo image
+
+More info on safeZone screen position at: https://community.bistudio.com/wiki/SafeZone
+
+Battleye Filters are missing due to forum change you will have to filter it as it loads sorry I know of few for scripts.txt !="bis_fnc_dynamicText;" !="logo.sqf" 
