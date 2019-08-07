@@ -1,0 +1,65 @@
+So,
+
+Users in the forum down below asked for help, so I decided to show it. Maybe you will need it too.
+
+This is what you need if you want a player to spawn... eerr...request a bike/quad bike or any other vehicle on spawn.
+
+mpmissions/your.pbo/init.sqf
+
+//TO BE USED ONLY ON SERVER
+if (isDedicated || isServer) then {
+	"do_MakeBike" addPublicVariableEventHandler {
+		_parameters = (_this select 1);
+		_parameters2  =(_parameters select 1);
+		diag_log format ["createVehicleRequested %1 ", _parameters]; // YOU NEED THIS FOR LOGS TO SEE WHO DID IT
+		veh = createVehicle["Exile_Bike_MountainBike", _parameters2 , [] ,0 , "NONE"];
+	};
+};
+mpmissions/your.pbo/spawn_bike.sqf (you can put it anywhere you want, just alter the path)
+
+if !((vehicle player) isEqualTo player) exitWith {}; //MAKE SURE WE ARE ON FEET
+
+//We check if we have money for that
+if (ExileClientPlayerMoney > 500) then {
+    titleText ["", "PLAIN DOWN"];
+    player playActionNow "Medic"; //ANIMATED DELAY
+    player removeAction DeployBikeAction; //REMOVE TO LET PLAYER SPAWN BIKES DURING THE PLAY
+    _spawnPos = player modelToWorld [0,2,0];
+    _spawnDir = (getDir player) -90;
+    do_MakeBike = [player, _spawnPos, _spawnDir];
+    ExileClientPlayerMoney = ExileClientPlayerMoney - 500; //REMOVE THE MONEY
+    uiSleep 3;
+    publicVariableServer "do_MakeBike"; //HEY SERVER GIVE ME A BIKE
+    uiSleep 1;
+    ['BIKE DEPLOYED',0,0.6,2,0] spawn bis_fnc_dynamictext;
+};
+ 
+
+edit config.cpp to include, you need to override default client function to add your new menu entry
+
+class CfgExileCustomCode 
+{
+    	ExileClient_object_player_bambiStateBegin = "ExileClient_object_player_bambiStateBegin.sqf";
+};
+ 
+
+put ExileClient_object_player_bambiStateBegin.sqf from exile client to your mpmission folder and edit it
+
+/**
+ * Exile Mod
+ * www.exilemod.com
+ * © 2015 Exile Mod Team
+ *
+ * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+ * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+ */
+ 
+private["_duration"];
+disableSerialization;
+_duration = _this;
+ExileClientPlayerIsBambi = true;
+ExileClientPlayerBambiStateExpiresAt = time + _duration; 
+true call ExileClient_gui_hud_toggleBambiIcon;
+DeployBikeAction = player addaction [("<t color=""#00CF11"">" + ("Spawn Bike") +"</t>"),"ULTIMATUM\spawn_bike.sqf","",-97,false,false,"",""]; //THIS IS WHAT HAS BEEN ADDED
+ExileClientEndBambiStateThread = [_duration, ExileClient_object_player_bambiStateEnd, [], true] call ExileClient_system_thread_addTask;
+true
