@@ -11,7 +11,7 @@ Instructions For Most Mods & Scripts Inside Folders :
 <a href="https://github.com/XCSVs/Scripts-Mods/blob/master/INSTRUCTIONS/Exile%20Server%20Owner%20Guide%20v1.7.pdf
 ">Full Server Install Instructions Here</a>
 
-[![EXLE MOD](https://i.imgur.com/a/03kUKrg)]()
+
 
 BACKING UP MYSQL: HOW TO AUTOMATICALLY BACKUP ALL MYSQL DATABASES ON WINDOWS WITH A BATCH FILE.
 
