@@ -14,7 +14,7 @@ One to two paragraph statement about your product and what it does.
 Instructions For Most Inside Folders :
 
 ```sh
-npm install my-crazy-module --save
+https://github.com/XCSVs/Scripts-Mods/blob/master/INSTRUCTIONS/Exile%20Server%20Owner%20Guide%20v1.7.pdf
 ```
 
 Windows:
