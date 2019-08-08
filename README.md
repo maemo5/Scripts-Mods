@@ -59,19 +59,8 @@ To save you some time I zipped up all the necessary files including the 7zip.exe
 
 Here is a quick look at the .bat file:
 
-:: Auto MySQL Backup For Windows Servers By Matt Moeller  v.1.5
-:: RED OLIVE INC.  - www.redolive.com
 
-:: Follow us on twitter for updates to this script  twitter.com/redolivedesign
-:: coming soon:  email admin a synopsis of the backup with total file size(s) and time it took to execute
-
-:: FILE HISTORY ----------------------------------------------
-:: UPDATE 11.7.2012  Added setup all folder paths into variables at the top of the script to ease deployment
-:: UPDATE 7.16.2012  Added --routines, fix for dashes in filename, and fix for regional time settings
-:: UPDATE 3.30.2012  Added error logging to help troubleshoot databases backup errors.   --log-error="c:\MySQLBackups\backupfiles\dumperrors.txt"
-:: UPDATE 12.29.2011 Added time bug fix and remote FTP options - Thanks to Kamil Tomas 
-:: UPDATE 5.09.2011  v 1.0 
-
+```sh
 
 :: If the time is less than two digits insert a zero so there is no space to break the filename
 
@@ -132,8 +121,6 @@ pushd %datafldr%
 
 echo "Pass each name to mysqldump.exe and output an individual .sql file for each"
 
-:: Thanks to Radek Dolezel for adding the support for dashes in the db name
-:: Added --routines thanks for the suggestion Angel
 
 :: turn on if you are debugging
 @echo off
@@ -181,12 +168,6 @@ echo "done"
 ::return to the main script dir on end
 popd
 
-
-
-
-```sh
-make install
-npm test
 ```
 
 
