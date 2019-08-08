@@ -13,10 +13,8 @@ One to two paragraph statement about your product and what it does.
 
 Instructions For Most Inside Folders :
 
-```sh
 <a href="https://github.com/XCSVs/Scripts-Mods/blob/master/INSTRUCTIONS/Exile%20Server%20Owner%20Guide%20v1.7.pdf
 ">Full Server Install Instructions Here</a>
-```
 
 Windows:
 
