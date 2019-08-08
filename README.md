@@ -23,6 +23,7 @@ I had little luck Googling solutions on how to backup all the databases individu
 
 ## FEATURES:
 
+```sh
 NO COST DIY SOLUTION
 BACKUP ALL MYSQL DATABASES, INCLUDING ALL NEWLY CREATED ONES AUTOMATICALLY
 CREATE AN INDIVIDUAL .SQL FILE FOR EACH DATABASE (GOD SEND WHEN RESTORING)
@@ -31,6 +32,7 @@ AUTOMATICALLY DELETE MYSQL BACKUPS OLDER THAN N DAYS (SET TO HOWEVER MANY DAYS Y
 FTP YOUR BACKUP ZIP TO A REMOTE LOCATION
 HIGHLY SUGGEST YOU ALSO SETUP A SCHEDULED TASK TO BACKUP YOUR MYSQL DIRECTORY AND YOUR NEW BACKUP FOLDER TO AN OFF SITE LOCATION
 SETUP INSTRUCTIONS:
+```
 Right click and edit mysqlbackup.bat file in notepad
 Set the backupdate format, whatever your preference, mine is yyyy-mm-dd-m-s ( I have not tested other variants)
 Set the root u/p (or user with adequate permissions)
@@ -46,7 +48,7 @@ Finally create a scheduled task in windows to run the batch file on a schedule, 
 
 
 ```sh
-##Basic Troubleshooting tips:
+Basic Troubleshooting tips:
 
 IMPORTANT NOTE: UPDATED 3.14.2013 IF YOU GET AN ERROR IN THE COMMAND PROMPT STATING
 “MYSQLDUMP: UNKOWN OPTION ‘–NO-BEEP’ THIS IS DUE TO YOUR MY.INI FILE HAVING AN INVALID OPTION UNDER [CLIENT].
