@@ -77,9 +77,11 @@ npm test
 * 0.0.1
     * Work in progress
 
-## Meta
+## Contact Me @
 
 Mr. Sage – [@NeoGryph](https://twitter.com/NeoGryph) – mrsage@xcsv.tv
+
+Discord [@mrsage](https://discord.gg/tvhquY6)
 
 
 
