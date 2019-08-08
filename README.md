@@ -16,10 +16,12 @@ Instructions For Most Inside Folders :
 <a href="https://github.com/XCSVs/Scripts-Mods/blob/master/INSTRUCTIONS/Exile%20Server%20Owner%20Guide%20v1.7.pdf
 ">Full Server Install Instructions Here</a>
 
-Windows:
+BACKING UP MYSQL: HOW TO AUTOMATICALLY BACKUP ALL MYSQL DATABASES ON WINDOWS WITH A BATCH FILE.
 
 ```sh
-edit autoexec.bat
+ Typically we have used the backup facility built into MySQL administrator, which unfortunately has now reached end of life. While it worked well it had some major shortcomings. For example once you created a scheduled backup it would only include the databases you told it to at the time of creation. Well, if you are like us and you constantly add new databases the new ones simply wouldn’t be backed up, Annoying. What replaced MySQL administrator? Enter the new MySQL Workbench. Great tool save one missing feature, they decided to no longer support scheduled MySQL backups.
+
+Obviously there are lots of scripts out there and easier solutions for linux based systems. The only windows solutions seemed to use php which seemed overly complex, relied on unnecessary systems that could fail, and introduced security concerns when you could use a simple batch file with a few lines of code to accomplish the same task. I had little luck Googling solutions on how to backup all the databases individually, zip them into one file, and delete the older archives so I sat down and wrote my own batch file. It was so useful to us that I feel compelled to share it with others. It should work on any version of windows x86 or x64 and any version of MySQL.
 ```
 
 ## Usage example
