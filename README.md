@@ -57,7 +57,6 @@ IMPORTANT NOTE: UPDATED 3.14.2013 IF YOU GET AN ERROR IN THE COMMAND PROMPT STAT
 
 To save you some time I zipped up all the necessary files including the 7zip.exe app with the folder structure to match the batch file. Simply unzip and update your specific paths in the .bat file and you’re done.
 
-## Download
 
 <a href="https://www.redolive.com/downloads/Auto-MySQL-Backup-Win-1.5.zip
 ">DIRECT DOWNLOAD</a>
