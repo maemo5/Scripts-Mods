@@ -46,7 +46,7 @@ Finally create a scheduled task in windows to run the batch file on a schedule, 
 
 
 ```sh
-Basic Troubleshooting tips:
+##Basic Troubleshooting tips:
 
 IMPORTANT NOTE: UPDATED 3.14.2013 IF YOU GET AN ERROR IN THE COMMAND PROMPT STATING
 “MYSQLDUMP: UNKOWN OPTION ‘–NO-BEEP’ THIS IS DUE TO YOUR MY.INI FILE HAVING AN INVALID OPTION UNDER [CLIENT].
