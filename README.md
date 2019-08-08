@@ -44,10 +44,14 @@ Test your batch file on a dummy directory. You’ll see the backup directory fil
 Finally create a scheduled task in windows to run the batch file on a schedule, remember to choose “Run whether user is logged on or not” otherwise it will fail.
  
 
+
+```sh
 Basic Troubleshooting tips:
 
 IMPORTANT NOTE: UPDATED 3.14.2013 IF YOU GET AN ERROR IN THE COMMAND PROMPT STATING “MYSQLDUMP: UNKOWN OPTION ‘–NO-BEEP’ THIS IS DUE TO YOUR MY.INI FILE HAVING AN INVALID OPTION UNDER [CLIENT]. OPEN YOUR MY.INI FILE FIND THE [CLIENT] SECTION AND COMMENT OUT #NO-BEEP WITH A HASH, RE-RUN THE BAT FILE AND IT WILL WORK. THIS ERROR HAS NOTHING TO DO WITH THIS SCRIPT, YOU’D GET THE SAME ERROR IF YOU RAN MYSQLDUMP.EXE DIRECTLY. I BELIEVE THAT MYSQL ADMIN ADDS THAT LINE TO THE INI FILE WHEN INSTALLED, THANKS ORACLE.
 80% OF THE “DIDN’T WORK FOR ME” ISSUES TEND TO BE RESOLVED BY TRIPLE CHECKING THAT YOUR DIRECTORY PATHS EXIST AND ARE CORRECT.
+```
+
  
 
 To save you some time I zipped up all the necessary files including the 7zip.exe app with the folder structure to match the batch file. Simply unzip and update your specific paths in the .bat file and you’re done.
@@ -169,6 +173,7 @@ echo "done"
 popd
 
 ```
+
 
 
 ## Contact Me @
