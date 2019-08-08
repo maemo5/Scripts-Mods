@@ -59,7 +59,7 @@ To save you some time I zipped up all the necessary files including the 7zip.exe
 
 
 <a href="https://www.redolive.com/downloads/Auto-MySQL-Backup-Win-1.5.zip
-">DIRECT DOWNLOAD</a>
+">BACKUP .BAT DIRECT DOWNLOAD</a>
 
 
 ```sh
