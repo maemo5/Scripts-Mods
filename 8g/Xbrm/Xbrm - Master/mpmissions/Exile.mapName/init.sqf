@@ -1,0 +1,1 @@
+[] execVM "addons\HEG_Xbrm_client\Xbrm_config.sqf";

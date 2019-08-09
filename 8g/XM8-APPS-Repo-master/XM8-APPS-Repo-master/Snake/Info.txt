@@ -1,0 +1,16 @@
+Author: shix  http://www.exilemod.com/profile/4566-shix/
+
+Use: A snake game ... it has no use but why the hell not
+
+Installation
+Move the snake folder to the Apps folder
+
+inside XM8Apps_Init.sqf change the app you want to use to 
+
+//App 1
+_app1Text = "Snake";
+_app1Logo = "";
+app1_action = {
+  execVM "xm8Apps\Apps\snake\snake.sqf";
+};
+

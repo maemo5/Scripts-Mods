@@ -1,0 +1,12 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+DROP TABLE IF EXISTS `XM8_APP_Scans`;
+CREATE TABLE IF NOT EXISTS `XM8_APP_Scans` (
+  `uid` varchar(32) NOT NULL,
+  `noScans` smallint(5) unsigned NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+ALTER TABLE `XM8_APP_Scans`
+ ADD PRIMARY KEY (`uid`);

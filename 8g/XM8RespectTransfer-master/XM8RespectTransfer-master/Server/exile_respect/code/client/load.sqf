@@ -1,0 +1,26 @@
+diag_log "XM8Respect: Initializing Client Functions";
+ExileClient_respect_event_onPlayerListBoxSelectionChanged 	= compileFinal preprocessFileLineNumbers "exile_respect\code\client\functions\ExileClient_respect_event_onPlayerListBoxSelectionChanged.sqf";
+ExileClient_respect_event_onRespectInputBoxChar 			= compileFinal preprocessFileLineNumbers "exile_respect\code\client\functions\ExileClient_respect_event_onRespectInputBoxChar.sqf";
+ExileClient_respect_event_onSendRespectButtonClick 		= compileFinal preprocessFileLineNumbers "exile_respect\code\client\functions\ExileClient_respect_event_onSendRespectButtonClick.sqf";
+ExileClient_respect_showMessageDenied 					= compileFinal preprocessFileLineNumbers "exile_respect\code\client\functions\ExileClient_respect_showMessageDenied.sqf";
+ExileClient_system_trading_network_respectHijackedRequest	= compileFinal preprocessFileLineNumbers "exile_respect\code\client\functions\ExileClient_system_trading_network_respectHijackedRequest.sqf";
+ExileClient_system_trading_network_respectReceivedRequest	= compileFinal preprocessFileLineNumbers "exile_respect\code\client\functions\ExileClient_system_trading_network_respectReceivedRequest.sqf";
+ExileClient_system_trading_network_respectTransferRequest	= compileFinal preprocessFileLineNumbers "exile_respect\code\client\functions\ExileClient_system_trading_network_respectTransferRequest.sqf";
+ExileClient_respect_event_notification_addNotification		= compileFinal preprocessFileLineNumbers "exile_respect\code\client\functions\ExileClient_respect_event_notification_addNotification.sqf";
+
+{
+	publicVariable _x;
+}
+forEach
+[
+	"ExileClient_respect_event_onPlayerListBoxSelectionChanged",
+	"ExileClient_respect_event_onRespectInputBoxChar",
+	"ExileClient_respect_event_onSendRespectButtonClick",
+	"ExileClient_respect_showMessageDenied",
+	"ExileClient_system_trading_network_respectHijackedRequest",
+	"ExileClient_system_trading_network_respectReceivedRequest",
+	"ExileClient_system_trading_network_respectTransferRequest",
+	"ExileClient_respect_event_notification_addNotification"
+];
+diag_log "XM8Respect: Fully initialized all client function";
+true
