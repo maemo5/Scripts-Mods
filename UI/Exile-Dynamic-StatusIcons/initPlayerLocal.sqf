@@ -1,0 +1,1 @@
+[] execVM "statusIcons\statusIcons.sqf";

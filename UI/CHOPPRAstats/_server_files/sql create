@@ -1,0 +1,25 @@
+
+## Add catchphrase to accounts table
+
+ALTER TABLE account ADD catchphrase VARCHAR(60);
+
+## create new stats table
+
+CREATE TABLE `player_stats` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`killer` VARCHAR(50) NULL DEFAULT NULL,
+	`victim` VARCHAR(100) NULL DEFAULT NULL,
+	`weaponused` VARCHAR(50) NULL DEFAULT NULL,
+	`distance` INT(11) NULL DEFAULT NULL,
+	`bambikill` INT(1) NULL DEFAULT NULL,
+	`raidkill` INT(11) NULL DEFAULT NULL,
+	`territorykill` INT(11) NULL DEFAULT NULL,
+	`time` DATETIME NULL DEFAULT NULL,
+	INDEX `Index 1` (`id`),
+	INDEX `Index 2` (`victim`),
+	INDEX `Index 3` (`killer`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
