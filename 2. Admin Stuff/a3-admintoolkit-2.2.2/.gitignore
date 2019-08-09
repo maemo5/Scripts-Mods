@@ -1,0 +1,16 @@
+# ignore the private key
+*.biprivatekey
+
+# ignore gimp files
+*.xcf
+
+# ignore update server script
+update-server.sh
+
+# ignore everything other than *.pbo in output folders (e.g. extracted content)
+@AdminToolkit/addons/*/*
+@AdminToolkitServer/addons/*/*
+@MissionFile/*/*
+
+# skip arma-dev ftp settiings
+.vscode/arma-dev.ftp.json

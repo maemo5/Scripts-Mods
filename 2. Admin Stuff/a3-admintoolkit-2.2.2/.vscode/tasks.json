@@ -1,0 +1,16 @@
+{
+    "version": "0.1.0",
+    "name": "PBO Task",
+    "command": "powershell",
+    "echoCommand": true,
+    "args": [
+        "${workspaceRoot}\\setup.ps1"
+    ],
+    "tasks": [
+        {
+            "suppressTaskName": true,
+            "taskName": "Patch MissionFile",
+            "args": [ "-PatchMission"]
+        }
+    ]
+}
