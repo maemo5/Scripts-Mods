@@ -1,0 +1,12 @@
+
+Todo:
+For V 6.90:
+
+  2. Test new unlock fix on HC
+  3. Write a claim vehicle function.
+  4. End of development most likely.
+  5. be sure AI do heal when wounded but not killed.
+    Event handler is triggered but does not seem to call the script to deal with everything.
+  6. test that ai toss smoke when healing
+  7. Check that functions for allerting units, groups and vehicles function properly in all situations.
+  ☐ Item: add check for empty crew slots and delete excess crew: note - use BIS_fnc_crewCount to get the number of slots.

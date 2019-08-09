@@ -1,0 +1,28 @@
+1. Added new settings to specify the number of crew per vehhicle to blck_config.sqf and blck_config_mil.sqf
+  
+    // global settings for this parameters
+    // Determine the number of crew plus driver per vehicle; excess crew are ignored.
+    // This can be a value or array of [_min, _max];
+	blck_vehCrew_blue = 3;
+	blck_vehCrew_red = 3;
+	blck_vehCrew_green = 3;
+	blck_vehCrew_orange = 3;
+
+    You can also define this value in missions by adding the following variable definition to the mission template:
+
+    _vehicleCrewCount = [3,6]; // min/max number of AI to load including driver. see the missions\blue\template.sqf and blck_configs.sqf for more info.
+
+2.  Lists of items to be excluded from dynamically generated loadouts has been moved to:
+    blck_config.sqf
+    blck_config_mil.sqf
+
+3. Added a new setting that specifies whether logging of blacklisted items is done (handy for debugging)
+    blck_logBlacklistedItems = true;  // set to false to disable logging 
+
+4. Hit and Killed event handlers extensively reworked. Methods for notification of nearby AI and Vehicles of the killers whereabouts were revised to be more inclusive of neighboring AI.
+
+5. Issues with AIHit events fixed; AI now deploy smoke and heal.
+
+6. Removed some unnecessary logging.
+
+7. Other minor coding fixes and optimizations.
