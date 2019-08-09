@@ -1,0 +1,44 @@
+/*
+* Place the below lines within your own description.ext
+* If you are using infiSTAR the "cfgRemoteExec" is a seperate file just add the ExAd line to it.
+* Some addons utilize the classes below. If this is the case simply add the ExAd line within the block.
+*/
+
+#include "ExAdClient\ExAd.cpp"
+
+class CfgFunctions
+{
+	#include "ExAdClient\CfgFunctions.cpp"
+};
+
+class CfgNetworkMessages
+{
+	#include "ExAdClient\CfgNetworkMessages.cpp"
+};
+
+class CfgHints
+{
+    #include "ExAdClient\CfgHints.cpp" // Only needed for ExAd Virtual Garage
+};
+
+class RscTitles
+{
+	#include "ExAdClient\RscTitles.cpp"
+};
+
+class CfgRemoteExec
+{
+	class Functions
+	{
+		mode = 1;
+		jip = 0;
+		
+		class ExileServer_system_network_dispatchIncomingMessage { allowedTargets=2; };
+		class ExAdServer_fnc_clientRequest { allowedTargets=2; };
+	};
+	class Commands
+	{
+		mode=0;
+		jip=0;
+	};
+};
