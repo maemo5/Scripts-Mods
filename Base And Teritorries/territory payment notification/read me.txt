@@ -1,0 +1,3 @@
+announcepay add to main root mp missions folder
+then add this to initplayerlocal
+execVM "Custom\announcepay.sqf";

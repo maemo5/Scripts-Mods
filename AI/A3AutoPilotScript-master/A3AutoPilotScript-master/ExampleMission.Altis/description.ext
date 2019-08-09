@@ -1,0 +1,8 @@
+class cfgFunctions
+{
+	#include "custom\ChaosAutoPilot\functions.hpp"
+};
+
+#include "custom\ChaosAutoPilot\Dialog\defines.hpp"
+#include "custom\ChaosAutoPilot\Dialog\dialogs.hpp"
+

@@ -1,0 +1,7 @@
+1st
+class CfgExileArsenal
+#include "custom\EBM\prices.hpp"
+
+2nd
+class CfgTraderCategories
+#include "custom\EBM\traders.hpp"
