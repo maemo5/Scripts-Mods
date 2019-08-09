@@ -1,0 +1,221 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"a3_characters_f",
+		"a3_map_altis",
+		"A3_Characters_F_Civil",
+		"A3_Structures_F_Civ_InfoBoards"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_Civil",
+		"a3_characters_f",
+		"A3_Structures_F_Civ_InfoBoards",
+		"a3_map_altis"
+	};
+	randomSeed=2810124;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Groups
+	{
+		items=1;
+		class Item0
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14109.647,26.547592,18822.262};
+					id=0;
+					side="CIV";
+					vehicle="C_man_1";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=4;
+		class Item0
+		{
+			position[]={14111.355,26.646397,18823.262};
+			id=1;
+			side="EMPTY";
+			vehicle="MapBoard_altis_F";
+			skill=0.60000002;
+			init="this addAction [""Open Travel System"", ""createDialog 'ETG_FastTravelSystem_Dialog'""];";
+		};
+		class Item1
+		{
+			position[]={3710.3931,11.740752,13144.76};
+			id=2;
+			side="EMPTY";
+			vehicle="MapBoard_altis_F";
+			skill=0.60000002;
+			init="this addAction [""Open Travel System"", ""createDialog 'ETG_FastTravelSystem_Dialog'""];";
+		};
+		class Item2
+		{
+			position[]={16796.559,14.092967,12477.32};
+			id=3;
+			side="EMPTY";
+			vehicle="MapBoard_altis_F";
+			skill=0.60000002;
+			init="this addAction [""Open Travel System"", ""createDialog 'ETG_FastTravelSystem_Dialog'""];";
+		};
+		class Item3
+		{
+			position[]={25543.953,17.647497,21192.604};
+			id=4;
+			side="EMPTY";
+			vehicle="MapBoard_altis_F";
+			skill=0.60000002;
+			init="this addAction [""Open Travel System"", ""createDialog 'ETG_FastTravelSystem_Dialog'""];";
+		};
+	};
+	class Markers
+	{
+		items=4;
+		class Item0
+		{
+			position[]={3710.6743,11.779737,13144.759};
+			name="ftravel_Kavala";
+			text="Traderzone Kavala";
+			type="mil_objective";
+		};
+		class Item1
+		{
+			position[]={14111.231,26.624046,18820.719};
+			name="ftravel_Athira";
+			text="Traderzone Athira";
+			type="mil_objective";
+		};
+		class Item2
+		{
+			position[]={16796.555,14.076782,12474.895};
+			name="ftravel_Pyrgos";
+			text="Traderzone Pyrgos";
+			type="mil_objective";
+		};
+		class Item3
+		{
+			position[]={25544.271,17.661779,21193.416};
+			name="ftravel_Sofia";
+			text="Traderzone Sofia";
+			type="mil_objective";
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=4770090;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=9548659;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=2319005;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+};

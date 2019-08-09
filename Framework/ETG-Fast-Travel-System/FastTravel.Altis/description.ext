@@ -1,0 +1,6 @@
+#include "dialogs\defines.hpp"
+#include "dialogs\FastTravelDialog.hpp"
+
+class RscTitles {
+	#include "dialogs\FastTravelHUD.hpp"
+};

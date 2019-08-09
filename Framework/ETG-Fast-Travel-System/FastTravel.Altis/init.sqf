@@ -1,0 +1,1 @@
+fn_ftravel = compile preprocessFile "scripts\fn_ftravel.sqf";
