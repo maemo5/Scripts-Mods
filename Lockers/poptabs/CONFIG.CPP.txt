@@ -1,0 +1,25 @@
+class CfgPoptabStorage
+{
+	class Exile_Container_Safe_Small      { max = 49999999; };
+	class EBM_Medikit                     { max = 49999999; };
+	class Exile_Container_CamoTent        { max = 49999999; };
+	class Exile_Container_Safe            { max = 49999999; };
+	class Exile_Container_Storagecrate    { max = 49999999; };
+	class Fridge_01_closed_F              { max = 49999999; };
+	class Land_Bunker_F                   { max = 49999999; };
+	class Land_Cargo20_military_green_F   { max = 49999999; };
+	class Land_Cargo20_sand_F             { max = 49999999; };
+	class Land_Cargo40_light_green_F      { max = 49999999; };
+	class Land_CargoBox_V1_F              { max = 49999999; };
+	class Land_GarbageContainer_closed_F  { max = 49999999; };
+	class Land_Icebox_F                   { max = 49999999; };
+	class Land_MetalCase_01_large_F       { max = 49999999; };
+	class Land_Metal_rack_F               { max = 49999999; };
+	class Land_Metal_wooden_rack_F        { max = 49999999; };
+	class Land_Pallet_MilBoxes_F          { max = 49999999; };
+	class Land_PlasticCase_01_medium_F    { max = 49999999; };
+	class Land_Rack_F                     { max = 49999999; };
+	class Land_ShelvesMetal_F             { max = 49999999; };
+	class Land_Suitcase_F                 { max = 49999999; };
+	class Land_ToolTrolley_02_F           { max = 49999999; };	
+};

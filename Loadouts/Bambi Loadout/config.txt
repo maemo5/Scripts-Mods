@@ -1,0 +1,2 @@
+//Bambi Loadout
+ExileServer_object_player_createBambi = "Overrides\ExileServer_object_player_createBambi.sqf";
