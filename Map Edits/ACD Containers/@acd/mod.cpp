@@ -1,0 +1,12 @@
+name = "ACD Arma3 Containers & Decorations";
+picture = "acd.paa";
+actionName = "GitHub";
+action = "https://github.com/vitalymind/ArmaContainersAndDecor";
+description = "ACD";
+logo = "acd.paa";
+logoOver = "acd.paa";
+tooltip = "ACD";
+tooltipOwned = "ACD";
+overview = "This mod adds 115 containers and over 700 decoration elements to use inside Eden editoror with plain scripting. Mod does not add any new models, it uses only models already found in Arma3.Maximum load for containers is calculated according to common sense and model size. In addition,all containers have 15k version, maximum load in them is big enough to hold pleanty of items.";
+author = "vitaly 'mind' chizhikov";
+overviewPicture = "acd.paa";
