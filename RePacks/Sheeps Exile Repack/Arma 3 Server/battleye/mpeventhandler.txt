@@ -1,0 +1,2 @@
+//new
+7 "" !"\[_this,\"bis_fnc_curatorrespawn\",false\] call bis_fnc_mp;" !"Engine" !"bis_fnc_curatorrespawn"

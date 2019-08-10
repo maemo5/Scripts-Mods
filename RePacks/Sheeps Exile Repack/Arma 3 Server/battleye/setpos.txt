@@ -1,0 +1,3 @@
+//new
+7 "" !"Exile_" !="C_man_polo" !"RyanZombieC_" !"RyanZombieB_" !="O_CargoNet_01_ammo_F"
+3 Exile_Unit_Player

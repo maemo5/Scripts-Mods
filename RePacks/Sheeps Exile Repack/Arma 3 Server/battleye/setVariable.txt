@@ -1,0 +1,6 @@
+//new
+7 "" !="exilexm8isonline" !="tf_range" !="bis_fnc_selectrespawntemplate_respawned" !="holder_in_use" !="slx_xeh_playable" !="bis_accesscounter" !"usable_ramp" !"can_copilot" !"cargo_offset" !"slots" !"load_offset" !"zload" !"can_outside" !"slots_num" !"default_mass" !="bis_fnc_objectvar_var" !"can_load" !"doors" !"attachedtruck" !"attachedpos" !"box_num" !"can_load" !"zload_cargo" !"civilrole" !="box_l" !"box_r" !"rhs_" !="bis_fnc_addcuratorplayer_handler"
+7 "realname"
+7 "ExileScore"
+7 "ExileMoney"
+7 "tf_range"

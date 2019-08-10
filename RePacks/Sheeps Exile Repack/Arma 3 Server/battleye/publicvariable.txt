@@ -1,0 +1,2 @@
+//new
+7 "" !="PVAHR_[a-z,0-9]{10,16}" !="PVAH_AdminReq" !="pVeh_rV" !"IL_" !"FuMS_" !="takegive_poptab" !="ShowAIKills" !="ShowPlayerKills" !="LogAIKills" !="LogPlayerKills" !="do_MakeBike"
