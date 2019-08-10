@@ -1,0 +1,30 @@
+version=53;
+center[]={14772.947,17.91,16799.453};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Marker";
+		position[]={-0.0234375,0,-0.017578125};
+		name="gvs_hel_0";
+		text="Helicopter Service Point";
+		type="n_maint";
+		id=2;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.024414063,0,0.017578125};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=4;
+		type="Land_HelipadCircle_F";
+	};
+};

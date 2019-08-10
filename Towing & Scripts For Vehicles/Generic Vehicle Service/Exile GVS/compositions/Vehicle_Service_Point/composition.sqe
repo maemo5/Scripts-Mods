@@ -1,0 +1,30 @@
+version=53;
+center[]={14676.618,17.91,16717.389};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.14648438,0,-0.16210938};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=0;
+		type="Land_HelipadCircle_F";
+	};
+	class Item1
+	{
+		dataType="Marker";
+		position[]={-0.14648438,0,0.16210938};
+		name="gvs_veh_0";
+		text="Vehicle Service Point";
+		type="n_maint";
+		id=1;
+	};
+};

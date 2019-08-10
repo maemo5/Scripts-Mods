@@ -1,0 +1,53 @@
+///////////////////////////////////////////////////////////////////////////////
+// Before we begin, it is important to know whether you have more than one
+// ARMA 3 profile. You will be using the Eden Editor to place markers down
+// within your mission pbo (i.e. Exile.Altis). If you place the folders listed
+// in the steps below in the wrong location you won't see them in Eden. To get
+// a better understanding of what I am talking about see Eden section in my guide.
+// Link: http://www.exilemod.com/topic/20277-guide-server-owner-w-infistar-eden-dms/
+///////////////////////////////////////////////////////////////////////////////
+
+***You may need to create folders if they do not already exist****
+
+Step 1: Copy the folders in the "compositions" folder into your own.
+Note: Located in your: MyDocuments > ARMA 3 or MyDocuments > ARMA 3 - Other Profiles > "Profile"
+
+Step 2: DePbo your mission pbo and place in your "missions" folder.
+Note: Notice I said "missions" and not "mpmissions".
+
+Step 3: Open your mission.sqm located within your mission (i.e. Exile.Altis\mission.sqm).
+Note: If you are not already using NotePad++ shame on you....use it!
+
+Step 4: Copy anything listed in the block "addons[]=" into a separate text document. Example below:
+		
+		addons[]=
+		{
+			"exile_client",
+			"CUP_Editor_Structures_Config",
+			"CUP_Editor_Buildings_Config",
+			"CUP_Misc3_Config",
+			"CUP_Misc_e_Config",
+			"A3_Structures_F_Items_Vessels",
+			"A3_Structures_F_EPA_Mil_Scrapyard",
+			"A3_Ui_F",	
+			"extendedbase"
+		};
+		
+Note: If you load your "initServer.sqf" serverside using "a3_custom.pbo" or "a3_custom_buildings.pbo" 
+you can skip this step. If you have no idea what I am talking about then it won't hurt to do this.
+
+Step 5: Open your mission in Eden Editor. Press F2 and click on the far right icon "Custom".
+Note: You may have an option to "IMPORT" instead of open. Don't panic go ahead import.
+
+Step 6: Place the compositions down for each service point as you desire. Save once you are done.
+Note: You can change the marker types and colors if you wish. Just ensure that you DON'T change the names.
+
+Step 7: Verify that the addons in Step 4 match your addons after saving. If not copy over them with original.
+Note: If you don't get this right bad things could happen.
+
+Step 8: Open the "description.ext" provided in download and follow steps within.
+Note: This is located within the "missions" folder of the download.
+
+Step 9: Open the "init.sqf" provided in download and follow steps within.
+
+Final Step: Copy the "gvs" folder provided into your own mission and RePbo. YOU ARE DONE!!

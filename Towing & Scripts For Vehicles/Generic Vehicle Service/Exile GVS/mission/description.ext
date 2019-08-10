@@ -1,0 +1,17 @@
+
+///////////////////////////////////////////////////////////////////////////////
+// Add the three "#include" lines below to your own "description.ext"
+// If you already have a "class RscTitles" you will simply place the
+// "#include" command within your own. If you do not have this class
+// you will copy the entire class and place at bottom.
+///////////////////////////////////////////////////////////////////////////////
+
+#include "gvs\colors_include.hpp"
+#include "gvs\control_include.hpp"
+
+
+
+class RscTitles
+{
+	#include "gvs\stc_include_alt.hpp"
+};

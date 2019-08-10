@@ -1,0 +1,32 @@
+version=53;
+center[]={14883.807,17.914,16590.406};
+class items
+{
+	items=2;
+	class Item0
+	{
+		dataType="Marker";
+		position[]={-0.010742188,0,0.005859375};
+		name="gvs_pla_0";
+		text="Plane Service Point";
+		type="n_maint";
+		id=3;
+		atlOffset=-0.00038719177;
+	};
+	class Item1
+	{
+		dataType="Object";
+		class PositionInfo
+		{
+			position[]={0.01171875,0.00037574768,-0.0078125};
+			angles[]={0.0013372133,0,6.2818484};
+		};
+		side="Empty";
+		flags=4;
+		class Attributes
+		{
+		};
+		id=5;
+		type="Land_HelipadCircle_F";
+	};
+};
