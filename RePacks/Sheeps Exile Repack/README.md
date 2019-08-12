@@ -1,18 +1,4 @@
-Sheeps Exile Repack - ExPack 0.01 "Fresh Jeans"
-=============
 
-Pre release of ExPack. 
-
-> YOU CAN NOT REUSE THE SCRIPTS/ADDONS IN THIS REPACK WITH OUT THE SCRIPT OWNERS PERMISSION
-
-Current Supported Maps
---------------------------
-* Altis
-* Bornholm
-* Chernarus 
-* Al Rayak
-* Sahrani
-* Esseker
 
 Current Scripts
 --------------------------
@@ -43,22 +29,6 @@ Current Scripts
 * GPS Check for Map Markers by [`Wyqer`](http://www.exilemod.com/profile/52393-wyqer/)
 * Indestructible Bases
 * Respect Based Load Outs
-
-Script Permission List
---------------------------
-* [`GR8`](http://www.exilemod.com/profile/64-gr8/)
-* [`Jenartor`](http://www.exilemod.com/profile/53934-jenartor/)
-* [`John`](http://www.exilemod.com/profile/38-john/)
-* [`Taylor Swift (Mezo)`](http://www.exilemod.com/profile/472-taylor-swift-mezo/)
-* [`Darth_Rouge`](http://www.exilemod.com/profile/3705-darth_rogue/)
-* [`Defent`](http://www.exilemod.com/profile/259-defent/)
-* [`Wyqer`](http://www.exilemod.com/profile/52393-wyqer/)
-* [`Shix`](http://www.exilemod.com/profile/4566-shix/)
-* [`IT07`](http://www.exilemod.com/profile/332-it07/)
-* [`eraser1`](http://www.exilemod.com/profile/96-eraser1/)
-* [`infiSTAR`](http://www.exilemod.com/profile/11-infistar/) - BE Filters
-* [`happydayz`](http://www.exilemod.com/profile/3076-happydayz/)
-* [`Kellojo`] (http://www.exilemod.com/profile/3541-kellojo/)
 
 Scripts to be added 
 --------------------------
