@@ -34,7 +34,7 @@ LordRampantHumps Items Pack : https://steamcommunity.com/sharedfiles/filedetails
 
 Exile Extended Items: https://steamcommunity.com/sharedfiles/filedetails/?id=897168981 New Exile Items.
 
-Uncomment the classes on the end of the CfgExileScavenge.hpp files to get some actions that use these mod items if you use these Mods!
+Uncomment the classes on the end of the CfgExileScavenge.hpp files to get some actions that use these mod items if you use these Mods
 
 
 
