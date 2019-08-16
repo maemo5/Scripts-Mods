@@ -1,45 +1,4 @@
-
-So far the player can:
-Scavenge through trash-bins/piles. (enabled by default)
-Scavenge through wrecks. (enabled by default)
-Scavenge through abandoned tents. (maybe only used in CHR, disabled by default)
-Scavenge through furniture inside houses. (enabled by default)
-Get water from different sources if player has empty bottle/container to fill. (enabled by default)
-Get fuel from different sources if player has empty fuel canister to fill. (enabled by default)
-Get log from stocks of wood (enabled by default)
-Get leaves and sticks from bushes and lower height trees (still WIP, disabled by default)
-Get cement from concrete slabs (disabled by default, use with care as game balance breaking if set incorrectly)
-Get wood planks from wood plank objects (disabled by default, use with care as game balance breaking if set incorrectly)
-Get Metal Poles from metal pole objects (disabled by default, use with care as game balance breaking if set incorrectly)
-Get Cinderblocks from Cinder Block pack objects if sledgehammer equipped (disabled by default, Requires Exile Extended Items Mod).
-Get pumpkins from pumpkin patch if shovel equiped (disabled by default, Requires Exile Extended Items Mod).
-Pickup apples from apple trees (disabled by default, Requires LordRampantHumps Items Pack Mod).
-Pickup fruit from various trees and bushes (disabled by default, Requires LordRampantHumps Items Pack Mod).
-This framework is simply customizable and you can add new interaction classes easily just by adding the required information to the configfiles.
-
-CfgExileHoldActions.hpp
-This file contains the information for each holdaction icon. If you want to create your own icon you can add a new class to this file and add the required information to get your icon working with the scavange system. You can find more information and examples in the file.
-
-CfgExileScavenge.hpp
-This file contains the information for each scavange class. If you want to create your own interaction to terrain/map objects you can do that by adding a new class for your interaction and fill it with the required information. You can find more information and examples in the file.
-
-CfgScavengeRecipes.hpp
-This file comes in action if you create a crafting scavange class that will require a item/weapon/tool to get a item back from the source. Take a look at the Waters and Cinderblocks classes within CfgExileScavenge.hpp to get a example for creating such a class. In short words this file contains crafting recipes that will be used for crafting scavange classes. You can find more information and examples in the file.
-
-Requirements:
-Exile Mod 1.0.3: http://www.exilemod.com/downloads/ Base Exile Mod.
-
-Optionals:
-LordRampantHumps Items Pack : https://steamcommunity.com/sharedfiles/filedetails/?id=1082756693 New Exile cusumables.
-
-Exile Extended Items: https://steamcommunity.com/sharedfiles/filedetails/?id=897168981 New Exile Items.
-
-Uncomment the classes on the end of the CfgExileScavenge.hpp files to get some actions that use these mod items if you use these Mods
-
-
-
-
-> ## Installation:
+ ## Installation:
 >
 > 1.	Drop the bootstrap, core, holdactions, dialogs and Exile_Client_Overrides folders + the >  CfgFunctions.cpp, CfgExileScavange.cpp, CfgScavengeRecipes.cpp, CfgExileHoldActions.cpp files into the root of your mission directory.
 > 2.	Merge the content of the provided description.ext with your Exile missions description.ext.
