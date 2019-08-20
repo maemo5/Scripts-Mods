@@ -2,7 +2,7 @@
 
 > Credits Will Be Given When Credits Can Be Gathered.
 
-![](C:\Users\Administrator\Pictures\XCSV EXILE\exile.jpg)
+![](<blockquote class="imgur-embed-pub" lang="en" data-id="fqSkxuT"><a href="//imgur.com/fqSkxuT"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
 
 ## Installation
 
