@@ -42,5 +42,5 @@ Supported parameters:
 
 
 
-# Instructions:
+# Youtube Tutorial:
 https://www.youtube.com/watch?time_continue=37&v=0STj1jMs0aA
