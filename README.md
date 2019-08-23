@@ -18,6 +18,6 @@ Discord [@mrsage](https://discord.gg/tvhquY6)
 
 [https://github.com/XCSVs/Scripts-Mods](https://github.com/XCSVs)
 
-##BattleEye Filters Tool
+## BattleEye Filters Tool
 
 https://github.com/XCSVs/Scripts-Mods/tree/master/2.%20Admin%20Stuff/Battleye/Battleye%20AEG
