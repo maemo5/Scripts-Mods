@@ -1,0 +1,1 @@
+BE_AEG.exe noScriptLogBackup noLogs enableDebugConsole runOnce
