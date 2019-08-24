@@ -29,7 +29,7 @@ Logging to .log is recommended because it creates separate .log files in the \Ba
 
 Logging to console is only useful if a live stream of BE logs is needed over Rcon. Beware it increases server resource usage, especially when streaming frequently written to logs. It also tends to flood Rcon and make connect, disconnect and kick messages difficult to read. For this reason logging to console is not advised unless your filters are configured to log very little. It should also be noted logging to both console and .log with logFile set in server.cfg is writing the same data to disk in two different files.
 
-Adding keywords:
+### Adding keywords:
 On a new line add the number followed by a single space and a keyword:
 5 keyword
 
@@ -42,7 +42,7 @@ If a keyword contains double quotes " they must be preceded by a \ like so:
 If a keyword contains regex metacharacters ({}[]()^$.|*+? and \) they must also be preceded by a \ like so:
 5 "key \(word\)"
 
-Note: The one exception to this rule is scripts.txt. Currently it is the only filter that does not support regex. It will be added later according to Bastian. This means the only characters that need to be preceded with a \ in scripts.txt are ", \ and line breaks for now.
+### Note: The one exception to this rule is scripts.txt. Currently it is the only filter that does not support regex. It will be added later according to Bastian. This means the only characters that need to be preceded with a \ in scripts.txt are ", \ and line breaks for now.
 
 Use keywords that catch multiple strings when possible. For example, say in createVehicle.txt you want to kick for spawning humvees. Instead of adding a keyword for each class name like this:
 5 HMMWV_DES_EP1
@@ -56,7 +56,7 @@ It is more efficient to use a single keyword that covers all humvees:
 To catch everything use empty double quotes for the keyword "" or leave it blank:
 5 ""
 
-Adding exceptions (fixing unwanted kicks):
+### Adding exceptions (fixing unwanted kicks):
 On the same line add a single space after the keyword. Then add either != or ! with the exception:
 5 keyword !keywordException
 
@@ -69,7 +69,7 @@ If an exception contains double quotes " they must be preceded by a \ like so:
 If an exception contains regex metacharacters ({}[]()^$.|*+? and \) they must also be preceded by a \ like so:
 5 keyword !"keyword \(exception\)"
 
-Note: Again this regex rule does not apply to scripts.txt.
+### Note: Again this regex rule does not apply to scripts.txt.
 
 
 The two options for exceptions are:
@@ -102,7 +102,7 @@ To fix we need to change the filter to include the entire statement as an except
 
 Now the above code example will not kick.
 
-Note: Statements can span multiple lines. For example:
+### Note: Statements can span multiple lines. For example:
 Code:
 if (2 > 1) then
 {
@@ -117,10 +117,10 @@ Now both of the above code examples will not kick.
 
 In general exceptions should be written with != when ever possible. Using ! allows much more through the filter. There are some exceptions to this, such as the createvehicle.txt HMMWV_Ambulance example above. In that case it is more efficient to use a single ! exception to allow multiple class names, rather than multiple != exceptions. Many more fancy things can be done in filters that support regex. To learn more about regex check this out.
 
-Note: BE filters are not case sensitive, but they are sensitive to single spaces and line breaks. Tabs are automatically stripped out in scripts.txt.
+### Note: BE filters are not case sensitive, but they are sensitive to single spaces and line breaks. Tabs are automatically stripped out in scripts.txt.
 
 Below is a walk through of each filter file in this format:
-filename.txt:
+### filename.txt:
 [Filters] Which command(s) parameter(s) are searched for keywords
 [Kick] Suggested keywords to kick and log (5)
 [Log] Optional keywords to log (1). Opting to log extra keywords may provide more information for identifying cheaters and monitoring server activity. The trade off is larger logs to review, extra resource usage from searching for more keywords and more writes to disk.
