@@ -12,6 +12,7 @@ Infistar also maintains filters for compatibility with his antihack. Place the .
 
 How they work:
 BE searches all scripts running on the client (scripts.txt) and specific command parameters (other filters) for the keywords provided in the filter .txt files. If a match is found it can take one of the following actions:
+
 ```
 1 = Log to .log file only
 2 = Log to console only
@@ -21,6 +22,7 @@ BE searches all scripts running on the client (scripts.txt) and specific command
 6 = Kick and log to console only
 7 = Kick and log to both
 ```
+
 Console refers to the window which opens when running the Arma server.exe. The console always shows all connects, disconnects and kicks. Its output is saved in a .txt file in the config directory if logFile option is set in server.cfg. It is also visible when connected over Rcon.
 
 Logging to .log is recommended because it creates separate .log files in the \BattlEye\ folder for each restriction type. This makes it much easier to review than one large console log file with all types mixed together.
