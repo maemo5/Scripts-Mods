@@ -1,7 +1,7 @@
-A Guide to BattlEye Filters​
+###A Guide to BattlEye Filters​
 I noticed a severe lack of information on BattlEye across Arma and DayZ modding communities. This guide will give an overview of BE filters, BEServer.cfg and automatic banning with BE.
 
-What they are:
+###What they are:
 BE filters are an optional feature of BattlEye Anti-Cheat for Arma games. They provide some additional protection that is customizable by mod makers and server admins. Currently Bastian ($able) is the sole developer of BE for Arma. However, other Bohemia devs like Dwarden contribute ideas for him to implement. Dwarden also made the original filters for DayZ mod a few years ago.
 
 Mod developers usually provide filters with their server files. Below are links to current filters for popular DayZ mods:
@@ -10,7 +10,7 @@ DayZ Mod
 DayZ Overwatch
 Infistar also maintains filters for compatibility with his antihack. Place the .txt files in your dedicated server config directory\BattlEye\ folder. If you are using a managed host this will usually be accessible through FTP.
 
-How they work:
+###How they work:
 BE searches all scripts running on the client (scripts.txt) and specific command parameters (other filters) for the keywords provided in the filter .txt files. If a match is found it can take one of the following actions:
 
 ```
