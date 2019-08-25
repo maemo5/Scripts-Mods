@@ -4,7 +4,7 @@
 
 > ## Installation PDF  [CLICK HERE TO DOWNLOAD](https://github.com/XCSVs/Scripts-Mods/blob/master/1.%20INSTRUCTIONS/Exile%20Server%20Owner%20Guide%20v1.7.pdf)
 
-Instructions For Most Mods & Scripts Inside Folders :
+# Instructions For Most Mods & Scripts Inside Folders :
 
 <a href="https://github.com/XCSVs/Scripts-Mods/blob/master/INSTRUCTIONS/Exile%20Server%20Owner%20Guide%20v1.7.pdf
 ">Full Server Install Instructions Here</a>
