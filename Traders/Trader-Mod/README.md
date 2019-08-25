@@ -1,59 +1,101 @@
-# Trader-Mod v7.2
-<b>Exile Easy Trader Mod System</b><br>
+---------------------------------------------------------------------------------------------------------------------------
 
-This trader system is offered free without any guarantee or promise and users should back up their files before proceeding.<br>
-It is compiled by [CiC]red_ned of http://cic-gaming.co.uk from different sources including documentation on exilemod and in game from various places.<br>
-I have only compiled what i found, attempted to simplify class names and created files for what i couldn't find and is given back to the community as thanks.<br>
-If you use then you should consider sharing any further development, bug fixes or expansions (as i have probably missed objects out or spelled things incorrectly).<br>
-This file does not include how to install mods or add to loot tables as that is already well documented.<br><br>
+1.  INSERT THE TRADERS FOLDER INTO YOUR MISSION PBO, DELETING ANY MOD FOLDERS YOU DONT USE.
 
-<b>This is a major update so please report bugs on exilemod.com</b><br><br>
+---------------------------------------------------------------------------------------------------------------------------
 
-<b>v7.2 Update</b><br>
-Added : TankDLC<br>
-Thanks to @ItsDutch plus his contributors<br>
+2.  IN CONFIG.CPP IN MISSION PBO: REPLACE FROM "class CfgExileArsenal" DOWN TO LINE ABOVE "class CfgExileCustomCode" with (CHOSING WHICH MODS YOU ARE USING AND DELETE OTHER LINES)
 
-<b>v7.1 Update</b><br>
-Added : HAFM<br>
-Added : MASWW2<br>
-Added : NLD<br>
-Added : POOK<br>
-Thanks to @ItsDutch plus his contributors<br>
+class CfgExileArsenal
+{
+    #include "TRADERS\APEX\ItemListAPEX.hpp"
+    #include "TRADERS\ARMA3V\ItemListARMA3V.hpp"
+    #include "TRADERS\ARMA3W\ItemListARMA3W.hpp"
+    #include "TRADERS\BPOINT\ItemListBPOINT.hpp"
+    #include "TRADERS\CUNITS\ItemListCUNITS.hpp"
+    #include "TRADERS\CUPV\ItemListCUPV.hpp"
+    #include "TRADERS\CUPW\ItemListCUPW.hpp"
+    #include "TRADERS\CUSTOM\ItemListCUSTOM.hpp"
+    #include "TRADERS\EBM\ItemListEBM.hpp"
+    #include "TRADERS\Exile\ItemListExile.hpp"
+    #include "TRADERS\FFAA\ItemListFFAA.hpp"
+    #include "TRADERS\FHQ\ItemListFHQ.hpp"
+    #include "TRADERS\FMP\ItemListFMP.hpp"
+    #include "TRADERS\FOX\ItemListFOX.hpp"
+    #include "TRADERS\HAP\ItemListHAP.hpp"
+    #include "TRADERS\HAFM\ItemListHAFM.hpp"
+    #include "TRADERS\HVP\ItemListHVP.hpp"
+    #include "TRADERS\HWP\ItemListHWP.hpp"
+    #include "TRADERS\Jonzie\ItemListJonzie.hpp"
+    #include "TRADERS\JETS\ItemListJETS.hpp"
+    #include "TRADERS\KA\ItemListKA.hpp"
+    #include "TRADERS\MASV\ItemListMASV.hpp"
+    #include "TRADERS\MASW\ItemListMASW.hpp"
+    #include "TRADERS\MASWW2\ItemListWW2.hpp"
+    #include "TRADERS\NIA\ItemListNIA.hpp"
+    #include "TRADERS\NLD\ItemListNLD.hpp"
+    #include "TRADERS\PODS\ItemListPODS.hpp"
+    #include "TRADERS\POOK\ItemListPOOK.hpp"
+    #include "TRADERS\R3FW\ItemListR3FW.hpp"
+    #include "TRADERS\RHSGREF\ItemListGREF.hpp"
+    #include "TRADERS\RHSSAF\ItemListRHSSAF.hpp"
+    #include "TRADERS\RHSV\ItemListRHSV.hpp"
+    #include "TRADERS\RHSW\ItemListRHSW.hpp"
+    #include "TRADERS\TANKDLC\ItemListTANKDLC.hpp"
+    #include "TRADERS\TRYK\ItemListTRYK.hpp"
+    //#include "TRADERS\HLC\ItemListHLC.hpp"        //should use NIArms
+};
 
-<b>v7.0 Update</b><br>
-Updated for Exile 1.0.4 "Pineapple"<br>
+---------------------------------------------------------------------------------------------------------------------------
 
-<b>v6.6 Update</b><br>
-Added KA Mod - thanks to CHAINSAW SQUIRREL<br>
-Text sorted some more files and checked optimisation of tabs not spaces<br>
+3.  IN CONFIG.CPP IN MISSION PBO: REPLACE FROM "class CfgTraderCategories" DOWN TO LINE ABOVE "class CfgTraders" with (CHOSING WHICH MODS YOU ARE USING AND DELETE OTHER LINES)
 
-<b>v6.5 Update</b><br>
-Added new class ApexVTOL<br>
-Added 100+ to ARMA3V<br>
-Added 100+ to RHSV<br>
-Fixed APEX<br>
-Cleaned up some code<br>
+class CfgTraderCategories
+{
+    #include "TRADERS\APEX\TraderCategoriesAPEX.hpp"
+    #include "TRADERS\ARMA3V\TraderCategoriesARMA3V.hpp"
+    #include "TRADERS\ARMA3W\TraderCategoriesARMA3W.hpp"
+    #include "TRADERS\BPOINT\TraderCategoriesBPOINT.hpp"
+    #include "TRADERS\CUNITS\TraderCategoriesCUNITS.hpp"
+    #include "TRADERS\CUPV\TraderCategoriesCUPV.hpp"
+    #include "TRADERS\CUPW\TraderCategoriesCUPW.hpp"
+    #include "TRADERS\CUSTOM\TraderCategoriesCUSTOM.hpp"
+    #include "TRADERS\EBM\TraderCategoriesEBM.hpp"
+    #include "TRADERS\Exile\TraderCategoriesExile.hpp"
+    #include "TRADERS\FFAA\TraderCategoriesFFAA.hpp"
+    #include "TRADERS\FHQ\TraderCategoriesFHQ.hpp"
+    #include "TRADERS\FMP\TraderCategoriesFMP.hpp"
+    #include "TRADERS\FOX\TraderCategoriesFOX.hpp"
+    #include "TRADERS\HAP\TraderCategoriesHAP.hpp"
+    #include "TRADERS\HAFM\TraderCategoriesHAFM.hpp"
+    #include "TRADERS\HVP\TraderCategoriesHVP.hpp"
+    #include "TRADERS\HWP\TraderCategoriesHWP.hpp"
+    #include "TRADERS\Jonzie\TraderCategoriesJonzie.hpp"
+    #include "TRADERS\JETS\TraderCategoriesJETS.hpp"
+    #include "TRADERS\KA\TraderCategoriesKA.hpp"
+    #include "TRADERS\MASV\TraderCategoriesMASV.hpp"
+    #include "TRADERS\MASW\TraderCategoriesMASW.hpp"
+    #include "TRADERS\MASWW2\TraderCategoriesWW2.hpp"
+    #include "TRADERS\NIA\TraderCategoriesNIA.hpp"
+    #include "TRADERS\NLD\TraderCategoriesNLD.hpp"
+    #include "TRADERS\PODS\TraderCategoriesPODS.hpp"
+    #include "TRADERS\POOK\TraderCategoriesPOOK.hpp"
+    #include "TRADERS\R3FW\TraderCategoriesR3FW.hpp"
+    #include "TRADERS\RHSGREF\TraderCategoriesGREF.hpp"
+    #include "TRADERS\RHSSAF\TraderCategoriesRHSSAF.hpp"
+    #include "TRADERS\RHSV\TraderCategoriesRHSV.hpp"
+    #include "TRADERS\RHSW\TraderCategoriesRHSW.hpp"
+    #include "TRADERS\TANKDLC\TraderCategoriesTANKDLC.hpp"
+    #include "TRADERS\TRYK\TraderCategoriesTRYK.hpp"
+    //#include "TRADERS\HLC\TraderCategoriesHLC.hpp"        //should use NIArms as that is newer and working version of HLC
+};
 
-<br><br>
-<b>v6.3 Update</b><br>
-Added 100+ vehicles into RHSV<br>
-Added some missing Arma3 vehicles<br>
-About 170 new items in total<br>
+---------------------------------------------------------------------------------------------------------------------------
 
-<b>v6.2 Update</b><br>
-Added BREAKING POINT Mod - thanks to CHAINSAW SQUIRREL<br>
+4.  IN CONFIG.CPP IN MISSION PBO: REPLACE FROM "class CfgTraders" DOWN TO LINE "class CfgTrading" with
 
-<br>
-NOTE RHS IS BOTH RUS AND USA.<br>
-<br><br>
-<b>***************************************************</b><br>
-<b>****** Thanks to all the following for help 	******</b><br>
-<b>****** XxFri3ndlyxX, [RG] Salutesh, SE7EN	******</b><br>
-<b>****** Tobias Solem, pomp4h, Bob_the_K, ItsDutch ******</b><br>
-<b>****** Razor77, jmayr2000, C][G GhostTown™	******</b><br>
-<b>****** ElShotte, Killerpoodezz, CHAINSAW SQUIRREL	******</b><br>
-<b>***************************************************</b><br>
-<br><br>
-<b>Big thanks to Exile Mod <a href="http://www.exilemod.com">http://www.exilemod.com</a></b><br>
-<br>
-<b>Orignal thread and support at <a href="http://www.exilemod.com/topic/8586-updated-easy-trader-set-up">http://www.exilemod.com/topic/8586-updated-easy-trader-set-up</a></b><br>
+class CfgTraders
+{
+    #include "TRADERS\CfgTraders.hpp"
+};
+You can alternatively copy the cfgtraders file content over the traders in the main config, not recommended.
