@@ -50,6 +50,7 @@ class CfgExileArsenal
 
 3.  IN CONFIG.CPP IN MISSION PBO: REPLACE FROM "class CfgTraderCategories" DOWN TO LINE ABOVE "class CfgTraders" with (CHOSING WHICH MODS YOU ARE USING AND DELETE OTHER LINES)
 
+'''
 class CfgTraderCategories
 {
     #include "TRADERS\APEX\TraderCategoriesAPEX.hpp"
@@ -89,6 +90,7 @@ class CfgTraderCategories
     #include "TRADERS\TRYK\TraderCategoriesTRYK.hpp"
     //#include "TRADERS\HLC\TraderCategoriesHLC.hpp"        //should use NIArms as that is newer and working version of HLC
 };
+'''
 
 ---------------------------------------------------------------------------------------------------------------------------
 
