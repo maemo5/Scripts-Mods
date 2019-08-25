@@ -6,6 +6,7 @@
 
 2. IN CONFIG.CPP IN MISSION PBO: REPLACE FROM "class CfgExileArsenal" DOWN TO LINE ABOVE "class CfgExileCustomCode" with (CHOSING WHICH MODS YOU ARE USING AND DELETE OTHER LINES)
 
+```
 class CfgExileArsenal
 {
     #include "TRADERS\APEX\ItemListAPEX.hpp"
@@ -45,6 +46,7 @@ class CfgExileArsenal
     #include "TRADERS\TRYK\ItemListTRYK.hpp"
     //#include "TRADERS\HLC\ItemListHLC.hpp"        //should use NIArms
 };
+```
 
 ---------------------------------------------------------------------------------------------------------------------------
 
