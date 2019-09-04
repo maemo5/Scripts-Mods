@@ -1,0 +1,139 @@
+put mozzie.png into mpmissions\Exile.Tanoa\ExAdClient\xm8\apps\deployvehicle
+
+* Navigate and open "mpmissions\Exile.Tanoa\config.cpp" insert the classes "PackDeployedVehicle" into appropriate parent classes.
+config.cpp
+
+class CfgInteractionMenus
+{
+    class Car 
+    {
+        targetType = 2;
+        target = "Car";
+
+        class Actions 
+        {
+            class PackDeployedVehicle: ExileAbstractAction
+            {
+                title = "Pack Vehicle";
+                condition = "call ExAd_XM8_DV_fnc_canPack";
+                action = "call ExAd_XM8_DV_fnc_pack";
+            };
+        };
+    };
+    class Bikes
+    {
+        targetType = 2;
+        target = "Bicycle";
+
+        class Actions
+        {
+            class PackDeployedVehicle: ExileAbstractAction
+            {
+                title = "Pack Bike";
+                condition = "call ExAd_XM8_DV_fnc_canPack";
+                action = "call ExAd_XM8_DV_fnc_pack";
+            };
+        };
+    };
+};
+
+if not already there
+
+
+* Add deploy classes into CfgXM8 in "mpmissions\Exile.Tanoa\config.cpp" and add them to the extraApps array; E.g.
+
+class CfgXM8
+{
+// add this to your existing list of apps !!!!
+// like extraApps[] = {"ExAd_JX","ExAd_Info","ExAd_CHVD","BRAmaRecipes","BaseMarker","ExAd_SB","ExAd_Quad","ExAd_Horse","ExAd_Mozzie","ExAd_Unit","Supply_Box"};
+    extraApps[] = {"ExAd_Mozzie"};
+
+    class ExAd_Mozzie
+    {
+        title = "Deploy Mosquito";
+        bambiState = 0;
+        vehicleClass = "RwG_Mozzie_Carl_Black";
+        recipe[] = {{"Exile_Item_ExtensionCord",1}};
+        packable = 1;
+        quickFunction = "['ExAd_Mozzie'] call ExAd_XM8_DV_fnc_spawnVehicle";
+    };
+    
+}; 
+
+place it under quad like this
+
+class ExAd_Quad
+{
+        title = "Deploy Quad Bike";
+        config = "ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
+        logo = "ExAdClient\XM8\Apps\DeployVehicle\Quad.paa";
+        bambiState = 0;
+        vehicleClass = "Exile_Bike_QuadBike_Black";
+        recipe[] = {{"Exile_Item_ExtensionCord",1}};
+        packable = 1;
+        autoCleanUp = 1;
+        quickFunction = "['ExAd_Quad'] call ExAd_XM8_DV_fnc_spawnVehicle";
+};
+
+class ExAd_Mozzie
+{
+        title = "Deploy Mosquito";
+        config = "ExAdClient\XM8\Apps\DeployVehicle\config.sqf";
+        logo = "ExAdClient\XM8\Apps\DeployVehicle\Quad.paa";
+        bambiState = 0;
+        vehicleClass = "RwG_Mozzie_Carl_Black";
+        recipe[] = {{"Exile_Item_ExtensionCord",1}};
+        packable = 1;
+        autoCleanUp = 1; 
+        quickFunction = "['ExAd_Mozzie'] call ExAd_XM8_DV_fnc_spawnVehicle";
+};
+
+add it to an available button like this 
+
+class XM8_App13_Button: RscExileXM8AppButton1x1
+{
+    textureNoShortcut = "ExAdClient\XM8\Apps\DeployVehicle\Mozzie.paa";
+    text = "Deploy Mosquito";
+    onButtonClick = "['ExAd_Mozzie'] call ExAd_XM8_DV_fnc_spawnVehicle";
+    resource = "";
+};
+In my case is button 13
+
+download - to server ie @rwg ...
+https://steamcommunity.com/sharedfiles/filedetails/?id=1361461340
+run in server startup params
+
+
+as long as you can spawn a quad - you can now spawn a mozzie
+
+if only anim plays then you need to do this
+
+go to description.ext
+
+and add this line to class cfgremoteexec
+
+class ExAdServer_fnc_clientRequest { allowedTargets=2; };
+
+this is mine!!!
+
+class CfgRemoteExec
+{
+    class Functions
+    {
+        mode = 1;
+        jip = 0;
+
+  class ExAdServer_fnc_clientRequest { allowedTargets=2; };
+  class AdminToolkit_network_receiveRequest { allowedTargets = 2; };
+        class ExileServer_system_network_dispatchIncomingMessage
+        {
+            allowedTargets = 2;
+        };
+    };
+
+    class Commands
+    {
+  mode = 0;
+  jip = 0;
+    };
+};
