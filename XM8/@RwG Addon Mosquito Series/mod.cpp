@@ -1,0 +1,14 @@
+name = "RwG Addon Mosquito";
+actionName = "Website";
+action = "https://discord.gg/JaT8Ufj";
+picture = "\RwG_Addon_Choppers_Mozzie\data\picture.paa";
+tooltip = "RwG Addon Mosquito";
+tooltipOwned = "Version 0.3a";
+overview = "A revised version of the Mozzie from Arma 2. New model, new sound, new animations and more color choices. This project is under development and more content will follow.";
+author = "[RwG] RaVeN103";
+overviewPicture = "\RwG_Addon_Choppers_Mozzie\data\Carl_Red\Mozzie_Carl_Red_Preview.paa";
+overviewText = "RwG Addon Mosquito";
+overviewFootnote = "";
+logoSmall = "RwG_Addon_Choppers_Mozzie\data\RwG_Mozzie_Carl_Icon.paa";
+logo = "RwG_Addon_Choppers_Mozzie\data\RwG_Mozzie_Carl_Picture.paa"; 
+//logoOver = "RwG_Addon_Choppers_Mozzie\data\RwG_Mozzie_Carl_Icon.paa"; 
