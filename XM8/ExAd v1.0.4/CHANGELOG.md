@@ -1,14 +1,6 @@
 #<img src="logo.png" alt="ExAd" width="200" />
 # Changelog:  
 
-## 180902 17:00 . v0.8.1  
-### Fixed
-* Updated onload.sqf for Base Markers to use Toast messages
-* Added several onclose.sqf files to eliminate log errors (files empty and unused for VG and Info, probably could just remove the calls from config.cpp)
-* Added fn_createCombo.sqf to xm8\functions folder
-* Added class createCombo(); to cfgfunctions.cpp in XM8 root folder
-* Minor tweaks to the layout of sb_settings onload.sqf file for the scroll and combo boxes ui usability
-
 ## 160801 17:00 . v0.8.0  
 ### Fixed
 * "ExadClient\CfgFunctions.cpp" to work with StatsBar (Core)
