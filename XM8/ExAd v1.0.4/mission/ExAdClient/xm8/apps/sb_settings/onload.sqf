@@ -22,7 +22,7 @@ _pH = 0.04;
 
 _rowH = 1.3 * _pH;
 _leftCol = 0 * _pW; 
-_leftColW = 17 * _pW;
+_leftColW = 16 * _pW;
 
 _cbCompTop = 1 * _pH;
 _cbW = 1.25 * _pW;
@@ -197,7 +197,7 @@ _sliderH ctrlSetEventHandler ["SliderPosChanged", format["(_this select 0) ctrlS
 //Text Font 
 _textCompTop = _bgCompTop + _rowH * 6;
 [_display,_newParent,([_slideClass,"strTxtTitleTextFont"] call ExAd_fnc_getNextIDC),[_rightCol, _textCompTop, _leftColW, _rowH],STR_ExAd_SB_APP_COMBO_FONT,_cbStrTextFont,_cbStrTextSize,_cbStrTextColor,_titleStrAlign,1] call ExAd_fnc_createStructuredText;
-_comboFont = [_display,_newParent,([_slideClass,"comboFont"] call ExAd_fnc_getNextIDC),[_rightCol, _textCompTop + _rowH * 1, _cbStrW, _rowH * 0.75],"ExAd_SB_Text_Font = ((_this select 0) lbData (_this select 1))",STR_ExAd_SB_APP_COMBO_TOOLTIP_FONT] call ExAd_fnc_createCombo;
+_comboFont = [_display,_newParent,([_slideClass,"comboFont"] call ExAd_fnc_getNextIDC),[_rightCol + _pW, _textCompTop + _rowH * 1, _cbStrW, _rowH * 0.75],"ExAd_SB_Text_Font = ((_this select 0) lbData (_this select 1))",STR_ExAd_SB_APP_COMBO_TOOLTIP_FONT] call ExAd_fnc_createCombo;
 {
 	private["_index"];
 	_index = _comboFont lbAdd _x;
@@ -210,7 +210,7 @@ for "_i" from 0 to lbSize _comboFont do {
 	}
 };
 
-_comboAlign = [_display,_newParent,([_slideClass,"comboAlign"] call ExAd_fnc_getNextIDC),[_rightCol, _textCompTop + _rowH * 2, _cbStrW, _rowH * 0.75],"ExAd_SB_Text_Align = ((_this select 0) lbData (_this select 1))",STR_ExAd_SB_APP_COMBO_TOOLTIP_ALIGN] call ExAd_fnc_createCombo;
+_comboAlign = [_display,_newParent,([_slideClass,"comboAlign"] call ExAd_fnc_getNextIDC),[_rightCol + _pW, _textCompTop + _rowH * 2, _cbStrW, _rowH * 0.75],"ExAd_SB_Text_Align = ((_this select 0) lbData (_this select 1))",STR_ExAd_SB_APP_COMBO_TOOLTIP_ALIGN] call ExAd_fnc_createCombo;
 {
 	private["_index"];
 	_index = _comboAlign lbAdd _x;

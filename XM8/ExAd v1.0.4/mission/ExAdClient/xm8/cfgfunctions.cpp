@@ -34,5 +34,6 @@ file = "ExAdClient\XM8\Functions";
 	class createXSliderH {};
 	class getAppCtrl {};
 	class getNextIDC {};
+	class createCombo {};
 	class postInitXM8 {file = "ExAdClient\XM8\postInit.sqf"; postInit = 1;};
 };

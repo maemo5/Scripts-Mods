@@ -23,10 +23,7 @@ class ExAd
     #include "Core\CfgFunctions.cpp"
     #include "VirtualGarage\CfgFunctions.cpp"
     #include "StatsBar\CfgFunctions.cpp"
-	#include "JxUnitScanner\CfgFunctions.cpp"
-    //#include "AdminEvents\CfgFunctions.cpp"
-    //#include "Hacking\CfgFunctions.cpp"
-    //#include "Grinding\CfgFunctions.cpp"
+    #include "JxUnitScanner\CfgFunctions.cpp"
     //#include "HaloParachute\CfgFunctions.cpp"
     #include "XM8\CfgFunctions.cpp"
 };
